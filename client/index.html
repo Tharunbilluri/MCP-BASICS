@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Filesystem Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MCP Filesystem Operations</h1>
+        
+        <div class="upload-section">
+            <h2>Upload Folder</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="folderInput" name="folder" webkitdirectory directory multiple required>
+                <button type="submit">Upload Folder</button>
+            </form>
+        </div>
+
+        <div class="command-section">
+            <h2>File Operations</h2>
+            <div class="command-input">
+                <input type="text" id="commandInput" placeholder="Enter command (e.g., create test.txt)">
+                <button onclick="sendCommand()">Send</button>
+            </div>
+            <div id="responseArea" class="response-area"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
